@@ -1,0 +1,51 @@
+Full Stack Foundations
+    Mission is to create a menu app: An interactive web application that provides a user a vareity of menu items that operates CRUD.
+
+    First lesson, we'll extract data from a database using python. We'll use a tool called ORM to manipulate queries as objects in python.
+
+        - Creating a DB an ORM:
+        In a standard python file, we can send queries to the database as strings, but python compiler has no way of helping if query has a typo or references a table that doesn't exist. Every other data structure in python has some kind of object. ORMs are like translators, converting our code from one form to another, btw the python code and the database.
+
+        SQLAlchemy is a popular ORM for python. With it, we can write a single python file to setup and config the DB. Creating a DB with SQLA has four major components: 
+            Configuration (used to import all the necessary modules). Generally shoudn't change much from project to project. It imports all modules needed at the beginning, creates instance of declarative base, and connects (or creates) the database and adds tables and columns.
+
+            Class (Used to represent our data in python object-orientedly). Only thing we need to do is create a class name, and make it extend from base class. Inside the class declaration, we add code for table and mapper. Use special variable "__tablename__" to let sql know tablename variable;
+
+            Table (The table that represents the specific table in our DB); and 
+
+            Mapper (The mapper connects the columns of our table to the class that represents it using variables) We must also pass attributes to the columns.
+
+    In the second lesson we'll create a data driven web app using only the web libararies that comes installed with pyton.
+        
+
+    In third lesson, we'll talk about flask.
+        Flask is a python web development framework.
+
+        Route:
+            We can make certain paths of a url in a flask app dynamic and attach multiple rules to a function. To add variables to a url, specify a rule with 'type:variable_name' where type could be an int, str or another path.
+
+        Flask configures a template engine to render html. We can also get info from DB into template by virtue of html escaping.
+
+        URL Building is a helpful feature in flask to help create urls based on the functions they execute:
+        url_for(function, variabl_name=variable).
+
+        In other to get data from a form, import request from flask
+        
+        When an API is communicated over the internet, following the rules of HTTP, it is called a restful API. JSON is a popular way of sending data with restful architecture.
+
+    Iterative development:-
+        Starting out simple and layering in complexity as you go. Not adding a new feature until the one befoere is finished. With each featiure, you stop, test, debug to make sure of a working app. This way everyone involved with the app knows what the status is and any enhacement soon to follow: This process is  called iterative development. Iterative development allows developers to code in an agile way. Agile means, since there is always a working protoype, ig a cleint or teammate asks for chenges, it's easire to react quickly without tripping up the entire process.
+
+        It's best to have a checklist of achievables when planning a new project, or even working on an existing project. E.g. of checklist
+            .Mock-ups for every page in the app and urls as well.
+
+            .Routing is the second iteration, to make sure you can get to all pages needed to be created.
+
+            .Templates and forms that are functioning properly.
+
+            .CRUD functionality that makes sure actions are retreiving data from database.
+
+            .API Endpoints that communicate data with browsers that need data.
+
+            .Styling, images and message flashing.
+    

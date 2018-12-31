@@ -1,0 +1,22 @@
+Full Stack Foundations
+    Mission is to create a menu app: An interactive web application that provides a user a vareity of menu items that operates CRUD.
+
+    First lesson, we'll extract data from a database using python. We'll use a tool called ORM to manipulate queries as objects in python.
+
+        - Creating a DB an ORM:
+        In a standard python file, we can send queries to the database as strings, but python compiler has no way of helping if query has a typo or references a table that doesn't exist. Every other data structure in python has some kind of object. ORMs are like translators, converting our code from one form to another, btw the python code and the database.
+
+        SQLAlchemy is a popular ORM for python. With it, we can write a single python file to setup and config the DB. Creating a DB with SQLA has four major components: 
+            Configuration (used to import all the necessary modules). Generally shoudn't change much from project to project. It imports all modules needed at the beginning, creates instance of declarative base, and connects (or creates) the database and adds tables and columns.
+
+            Class (Used to represent our data in python object-orientedly). Only thing we need to do is create a class name, and make it extend from base class. Inside the class declaration, we add code for table and mapper. Use special variable "__tablename__" to let sql know tablename variable;
+
+            Table (The table that represents the specific table in our DB); and 
+
+            Mapper (The mapper connects the columns of our table to the class that represents it using variables) We must also pass attributes to the columns.
+
+    In the second lesson we'll create a data driven web app using only the web libararies that comes installed with pyton.
+        
+
+    In third lesson, we'll talk about flask.
+    
